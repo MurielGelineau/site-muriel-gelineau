@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muriel Gelineau — Assistante administrative & Rédactrice web SEO à Agen</title>
+<meta name="description" content="Muriel Gelineau, assistante administrative et rédactrice web SEO indépendante à Agen (47). Gestion administrative, rédaction web, optimisation de sites. Devis gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F2FB;
+    --card:#FFFFFF;
+    --ink:#2E1250;
+    --ink-soft:#6B5286;
+    --brass:#A523DA;
+    --brass-deep:#7A1FAD;
+    --cyan:#7A1FAD;
+    --slate:#5A1F88;
+    --slate-deep:#411F6A;
+    --line:#E3D3EF;
+    --radius:4px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--ink);
+    margin:0 0 .4em 0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
+
+  /* ---- Nav ---- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,242,251,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;max-width:1080px;margin:0 auto;
+  }
+  .wordmark{font-family:'Fraunces', serif;font-size:1.15rem;letter-spacing:.2px;}
+  .wordmark span{display:block;font-family:'Work Sans',sans-serif;font-size:.68rem;color:var(--ink-soft);margin-top:1px;}
+  nav.links{display:flex;gap:26px;font-size:.92rem;}
+  nav.links a{text-decoration:none;position:relative;padding:4px 0;}
+  nav.links a:after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--brass);
+    transition:width .25s ease;
+  }
+  nav.links a:hover:after,nav.links a:focus-visible:after{width:100%;}
+  .nav-cta{
+    font-size:.85rem;padding:9px 16px;border:1px solid var(--ink);border-radius:var(--radius);
+    text-decoration:none;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--paper);}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;}
+
+  @media(max-width:760px){
+    nav.links{
+      position:fixed;inset:64px 0 auto 0;background:var(--paper);
+      flex-direction:column;gap:0;border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .3s ease;
+    }
+    nav.links.open{max-height:320px;}
+    nav.links a{padding:14px 28px;border-top:1px solid var(--line);}
+    nav.links a:after{display:none;}
+    .nav-cta{display:none;}
+    .burger{display:block;}
+  }
+
+  /* ---- Ledger divider ---- */
+  .rule{
+    display:flex;align-items:center;gap:10px;max-width:1080px;margin:0 auto;padding:0 28px;
+  }
+  .rule:before{content:"";flex:0 0 22px;height:2px;background:var(--brass);}
+  .rule:after{content:"";flex:1;height:1px;background:var(--line);}
+
+  section{padding:86px 0;}
+  .eyebrow{color:var(--brass-deep);font-size:.86rem;margin:0 0 10px 0;}
+
+  /* ---- Hero ---- */
+  .hero{padding-top:64px;}
+  .hero .wrap{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;
+  }
+  .hero h1{font-size:clamp(2.1rem,4vw,3.1rem);line-height:1.12;max-width:14ch;}
+  .hero p.lede{font-size:1.08rem;color:var(--ink-soft);max-width:46ch;margin-bottom:28px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+  .btn{
+    display:inline-block;padding:13px 22px;border-radius:var(--radius);text-decoration:none;
+    font-size:.95rem;font-weight:500;border:1px solid transparent;
+  }
+  .btn-primary{background:linear-gradient(135deg, var(--brass-deep), var(--brass) 160%);color:#fff;font-weight:600;}
+  .btn-primary:hover{background:linear-gradient(135deg, var(--slate-deep), var(--brass-deep) 160%);color:#fff;}
+  .btn-ghost{border-color:var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;}
+  .stat b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;}
+  .stat span{font-size:.85rem;color:var(--ink-soft);}
+
+  /* Carnet / notepad visual */
+  .carnet{
+    background:var(--card);border:1px solid var(--line);border-radius:2px;
+    padding:26px 24px;transform:rotate(-1.6deg);
+    box-shadow:8px 10px 0 rgba(36,33,29,.06);
+    position:relative;
+  }
+  .carnet:before{
+    content:"";position:absolute;top:16px;left:-8px;width:16px;height:16px;
+    background:var(--slate);border-radius:50%;
+  }
+  .carnet h3{font-size:1rem;color:var(--ink-soft);font-weight:500;font-family:'Work Sans',sans-serif;margin-bottom:16px;}
+  .carnet ul{list-style:none;margin:0;padding:0;}
+  .carnet li{
+    display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);
+    font-size:.95rem;
+  }
+  .carnet li:last-child{border-bottom:0;}
+  .check{
+    flex:0 0 20px;height:20px;border:1.5px solid var(--brass);border-radius:50%;
+    position:relative;
+  }
+  .check.on:after{
+    content:"";position:absolute;left:5px;top:2px;width:5px;height:9px;
+    border-right:2px solid var(--brass);border-bottom:2px solid var(--brass);
+    transform:rotate(38deg);opacity:0;animation:tick .3s ease forwards;
+  }
+  @keyframes tick{to{opacity:1;}}
+
+  @media(max-width:820px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .carnet{transform:none;max-width:380px;}
+  }
+
+  /* ---- Services ---- */
+  .services-list{margin-top:36px;border-top:1px solid var(--line);}
+  .service-row{
+    display:grid;grid-template-columns:56px 1fr;gap:22px;
+    padding:30px 0;border-bottom:1px solid var(--line);
+  }
+  .service-row .icon{
+    width:44px;height:44px;border:1.5px solid var(--brass);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--brass-deep);
+  }
+  .service-row h3{font-size:1.25rem;margin-bottom:8px;}
+  .service-row p{color:var(--ink-soft);max-width:60ch;margin:0;}
+
+  /* ---- About ---- */
+  .about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;}
+  .photo-frame{
+    aspect-ratio:4/5;border:1px dashed var(--brass);border-radius:2px;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;
+    color:var(--ink-soft);background:var(--card);text-align:center;padding:20px;
+  }
+  .photo-frame svg{opacity:.55;}
+  .photo-frame small{font-size:.78rem;max-width:22ch;}
+  .about-copy p{color:var(--ink-soft);margin-bottom:16px;}
+  .about-copy .signature{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;margin-top:22px;}
+  @media(max-width:760px){.about .wrap{grid-template-columns:1fr;}}
+
+  /* ---- Testimonials ---- */
+  .avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px;}
+  .avis-card{
+    background:var(--card);border:1px solid var(--line);border-radius:2px;padding:26px 22px;
+    border-top:3px solid var(--brass);
+  }
+  .avis-card p{color:var(--ink-soft);font-size:.95rem;min-height:80px;}
+  .avis-card .who{font-size:.85rem;color:var(--ink);margin-top:14px;font-weight:500;}
+  @media(max-width:820px){.avis-grid{grid-template-columns:1fr;}}
+
+  /* ---- Gallery ---- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
+  .gallery-tile{
+    aspect-ratio:1;border:1px dashed var(--line);border-radius:2px;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+    color:var(--ink-soft);background:var(--card);text-align:center;padding:12px;font-size:.82rem;
+  }
+  @media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ---- Contact ---- */
+  .contact{background:var(--slate-deep);color:#EDE7DA;}
+  .contact h2{color:#fff;}
+  .contact .eyebrow{color:var(--brass);}
+  .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;}
+  .contact-info a{text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.35);}
+  .contact-info .item{margin-bottom:22px;}
+  .contact-info .label{font-size:.8rem;color:#B9C4CC;margin-bottom:4px;}
+  .contact-info .value{font-size:1.05rem;}
+  form{display:flex;flex-direction:column;gap:14px;}
+  form label{font-size:.85rem;color:#C7CFD5;}
+  form input,form textarea{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.25);
+    border-radius:var(--radius);padding:12px 14px;color:#fff;font-family:inherit;font-size:.95rem;
+  }
+  form input::placeholder,form textarea::placeholder{color:#93A0A8;}
+  form button{
+    margin-top:6px;align-self:flex-start;background:var(--brass);color:#fff;border:0;
+    padding:13px 24px;border-radius:var(--radius);font-size:.95rem;cursor:pointer;font-weight:500;
+  }
+  form button:hover{background:var(--brass-deep);}
+  @media(max-width:760px){.contact .wrap{grid-template-columns:1fr;}}
+
+  footer{padding:34px 0;text-align:center;font-size:.85rem;color:var(--ink-soft);}
+  footer .wrap{border-top:1px solid var(--line);padding-top:26px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="wordmark-group" style="display:flex;align-items:center;gap:12px;">
+      <img src="logo.png" alt="Logo Muriel Gelineau" style="height:40px;width:auto;">
+      <div class="wordmark">Muriel Gelineau<span>Assistante administrative & rédactrice web</span></div>
+    </div>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Devis gratuit</a>
+  </div>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Agen · Lot-et-Garonne · à distance dans toute la France</p>
+      <h1>Déléguez votre administratif, gagnez en visibilité sur le web.</h1>
+      <p class="lede">Secrétaire indépendante et rédactrice web SEO, j'accompagne les entrepreneurs qui veulent souffler un peu et se faire remarquer en ligne — sans embaucher.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:murielgelineau@gmail.com?subject=Demande%20de%20devis">Demander un devis gratuit</a>
+        <a class="btn btn-ghost" href="#services">Voir mes services</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>20 ans</b><span>d'expérience en gestion d'entreprise</span></div>
+        <div class="stat"><b>100%</b><span>à distance, partout en France</span></div>
+        <div class="stat"><b>Gratuit</b><span>premier échange & devis</span></div>
+      </div>
+    </div>
+    <div class="carnet">
+      <h3>Ce que je gère pour vous</h3>
+      <ul>
+        <li><span class="check on"></span> Facturation & suivi administratif</li>
+        <li><span class="check on"></span> Article de blog optimisé SEO</li>
+        <li><span class="check on"></span> Fiche Google Business Profile</li>
+        <li><span class="check"></span> Votre projet, à venir</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Ce que je propose</p>
+    <h2>Une double compétence, un seul interlocuteur</h2>
+    <div class="services-list">
+      <div class="service-row">
+        <div class="icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.4"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3>Gestion administrative</h3>
+          <p>Organisation, facturation, suivi comptable, social et bancaire : je prends en charge vos tâches du quotidien, avec la même rigueur qu'une collaboratrice sur place, pour que vous puissiez vous concentrer sur votre cœur de métier.</p>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 19l3.5-1L19 7.5a1.6 1.6 0 000-2.2l-.3-.3a1.6 1.6 0 00-2.2 0L6 15.5 5 19z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h3>Rédaction web SEO</h3>
+          <p>Articles de blog, pages À propos, fiches produits, newsletters, e-books : des contenus pensés pour être lus par vos visiteurs — et bien classés par les moteurs de recherche.</p>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3>Optimisation & sites internet</h3>
+          <p>Audit et réécriture SEO de contenus existants, mise à jour de votre site, optimisation de votre fiche Google Business Profile : je fais le point sur votre présence en ligne et je l'améliore.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section id="apropos" class="about">
+  <div class="wrap">
+    <img src="collaboration.jpg" alt="Muriel Gelineau en collaboration avec un client" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;">
+    <div class="about-copy">
+      <p class="eyebrow">À propos</p>
+      <h2>Une assistante qui parle aussi le langage du web</h2>
+      <p>Après plus de 20 ans passés comme assistante de direction au sein d'une entreprise, j'ai fait le choix de l'indépendance pour mettre mon expérience au service de plusieurs entrepreneurs à la fois.</p>
+      <p>Passionnée par les nouvelles technologies, je me forme en continu à la rédaction web et à la création de sites internet, afin de proposer un accompagnement complet : administratif d'un côté, digital de l'autre — sans que vous ayez à jongler entre plusieurs prestataires.</p>
+      <p>J'interviens à distance, en France comme à l'étranger, avec la même disponibilité et le même sérieux qu'une collaboratrice présente à vos côtés.</p>
+      <p class="signature">— Muriel Gelineau</p>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section id="avis">
+  <div class="wrap">
+    <p class="eyebrow">Ils me font confiance</p>
+    <h2>Avis clients</h2>
+    <div class="avis-grid">
+      <div class="avis-card">
+        <p>Notre association a confié la rédaction de plusieurs documents à Muriel. Nous avons été agréablement surpris par la rapidité de ses réponses et la qualité de son travail — nous referons appel à ses services sans hésiter.</p>
+        <div class="who">Une association cliente</div>
+      </div>
+      <div class="avis-card">
+        <p>Une personne très professionnelle et à l'écoute. Elle m'a rassurée par téléphone en dehors de ses horaires habituels, et a réalisé un audit complet et très réactif. Je referai appel à elle si besoin.</p>
+        <div class="who">Cliente — Audit & accompagnement</div>
+      </div>
+      <div class="avis-card">
+        <p>J'ai fait appel à Muriel pour la rédaction d'articles web. Ses textes sont clairs, bien structurés et adaptés au public visé, avec une vraie maîtrise du référencement naturel.</p>
+        <div class="who">Client — Rédaction web SEO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <p class="eyebrow">Discutons de votre projet</p>
+      <h2>Contact</h2>
+      <div class="item">
+        <div class="label">Téléphone</div>
+        <div class="value"><a href="tel:0683203552">06 83 20 35 52</a></div>
+      </div>
+      <div class="item">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:murielgelineau@gmail.com">murielgelineau@gmail.com</a></div>
+      </div>
+      <div class="item">
+        <div class="label">Zone d'intervention</div>
+        <div class="value">Agen, Lot-et-Garonne (47) — à distance dans toute la France</div>
+      </div>
+      <div class="item">
+        <div class="label">Devis</div>
+        <div class="value">Premier échange et devis toujours gratuits</div>
+      </div>
+    </div>
+    <form id="contactForm">
+      <label for="nom">Nom</label>
+      <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet en quelques mots..." required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    EI Muriel Gelineau — Assistante administrative & rédactrice web SEO indépendante · Agen (47)
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nom = encodeURIComponent(document.getElementById('nom').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+    const body = `Nom: ${decodeURIComponent(nom)}%0AEmail: ${decodeURIComponent(email)}%0A%0A${message}`;
+    window.location.href = `mailto:murielgelineau@gmail.com?subject=Nouveau%20message%20depuis%20le%20site&body=${body}`;
+  });
+</script>
+
+</body>
+</html>
