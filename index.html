@@ -55,8 +55,8 @@
     display:flex;align-items:center;justify-content:space-between;
     padding:16px 28px;max-width:1080px;margin:0 auto;
   }
-  .wordmark{font-family:'Fraunces', serif;font-size:1.15rem;letter-spacing:.2px;}
-  .wordmark span{display:block;font-family:'Work Sans',sans-serif;font-size:.68rem;color:var(--ink-soft);margin-top:1px;}
+  .wordmark{font-family:'Fraunces', serif;font-weight:600;font-size:1.65rem;letter-spacing:.2px;color:var(--slate-deep);}
+  .wordmark span{display:block;font-family:'Work Sans',sans-serif;font-weight:400;font-size:.8rem;color:var(--ink-soft);margin-top:2px;}
   nav.links{display:flex;gap:26px;font-size:.92rem;}
   nav.links a{text-decoration:none;position:relative;padding:4px 0;}
   nav.links a:after{
@@ -75,10 +75,10 @@
   @media(max-width:760px){
     nav.links{
       position:fixed;inset:64px 0 auto 0;background:var(--paper);
-      flex-direction:column;gap:0;border-bottom:1px solid var(--line);
-      max-height:0;overflow:hidden;transition:max-height .3s ease;
+      flex-direction:column;gap:0;border-bottom:0 solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .3s ease, border-bottom-width .3s ease;
     }
-    nav.links.open{max-height:320px;}
+    nav.links.open{max-height:320px;border-bottom-width:1px;}
     nav.links a{padding:14px 28px;border-top:1px solid var(--line);}
     nav.links a:after{display:none;}
     .nav-cta{display:none;}
@@ -226,7 +226,7 @@
 <header class="site">
   <div class="nav">
     <div class="wordmark-group" style="display:flex;align-items:center;gap:12px;">
-      <img src="logo.png" alt="Logo Muriel Gelineau" style="height:40px;width:auto;">
+      <img src="logo.png" alt="Logo Muriel Gelineau" style="height:56px;width:auto;">
       <div class="wordmark">Muriel Gelineau<span>Assistante administrative & rédactrice web</span></div>
     </div>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
