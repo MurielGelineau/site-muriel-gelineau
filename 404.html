@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Page introuvable — Muriel Gelineau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F2FB;
+    --card:#FFFFFF;
+    --ink:#2E1250;
+    --ink-soft:#6B5286;
+    --brass:#A523DA;
+    --brass-deep:#7A1FAD;
+    --slate-deep:#411F6A;
+    --line:#E3D3EF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;min-height:100vh;display:flex;flex-direction:column;
+    background:var(--paper);color:var(--ink);
+    font-family:'Work Sans',sans-serif;line-height:1.6;
+  }
+  header{padding:18px 28px;border-bottom:1px solid var(--line);}
+  header a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--slate-deep);}
+  header img{height:48px;width:auto;}
+  header span{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;}
+  main{
+    flex:1;display:flex;align-items:center;justify-content:center;padding:60px 28px;text-align:center;
+  }
+  .box{max-width:520px;}
+  .code{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(4rem,14vw,7rem);
+    color:var(--brass);line-height:1;margin:0 0 8px;
+  }
+  h1{font-family:'Fraunces',serif;font-weight:500;font-size:1.7rem;color:var(--slate-deep);margin:0 0 14px;}
+  p{color:var(--ink-soft);margin:0 0 28px;}
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:4px;text-decoration:none;
+    background:linear-gradient(135deg,var(--brass-deep),var(--brass) 160%);color:#fff;font-weight:600;
+  }
+  .btn:hover{background:var(--slate-deep);}
+  .contact{margin-top:22px;font-size:.9rem;}
+  .contact a{color:var(--brass-deep);}
+</style>
+</head>
+<body>
+<header>
+  <a href="/">
+    <img src="/logo.png" alt="Logo Muriel Gelineau">
+    <span>Muriel Gelineau</span>
+  </a>
+</header>
+<main>
+  <div class="box">
+    <p class="code">404</p>
+    <h1>Cette page a changé d'adresse</h1>
+    <p>Mon site a été entièrement refait et cette page n'existe plus à cette adresse. Vous trouverez tout ce que vous cherchez (services, présentation, contact) sur la page d'accueil.</p>
+    <a class="btn" href="/">Retour à l'accueil</a>
+    <p class="contact">Besoin d'aide ? <a href="mailto:murielgelineau@gmail.com">murielgelineau@gmail.com</a> · <a href="tel:0683203552">06 83 20 35 52</a></p>
+  </div>
+</main>
+</body>
+</html>
